@@ -128,3 +128,16 @@ header .column span {
 .piano-keys .key.hide span {
     display: none;
 }
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-color: #000;
+    }
+
+    .container {
+        width: 100vh; /* Use a altura da tela para ocupar toda a altura do dispositivo */
+        height: 100vw; /* Use a largura da tela para ocupar toda a largura do dispositivo */
+        transform: rotate(90deg);
+        padding: 0px;
+    }
+}
