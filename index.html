@@ -4,37 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="src/styles/global.css">
-    <title>Jogo da Memória</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;1,200;1,400&display=swap" rel="stylesheet">
+
+    <title>Simulador de Piano</title>
 </head>
 <body>
-    <div class="container">
-        <h2>JOGO DA MEMÓRIA</h2>
-        <div class="settings">
-            <h2>Dificuldade:</h2>
-            <div class="difficulty">
-                <input type="radio" id="facil" name="difficulty" value="facil" checked>
-                <label for="facil">Fácil</label><br>
-                <input type="radio" id="medio" name="difficulty" value="medio">
-                <label for="medio">Médio</label><br>
-                <input type="radio" id="dificil" name="difficulty" value="dificil">
-                <label for="dificil">Difícil</label><br>
-                <input type="radio" id="impossivel" name="difficulty" value="impossivel">
-                <label for="impossivel">Impossível</label>
+   <div class="container">
+        <header>
+            <h2>Piano Virtual do Wylzera</h2>
+            <div class="column volume-slider">
+                <span>Volume</span> <input type="range" min="0" max="1" value="0.5" step="any">
             </div>
-            <h2>Vidas:<span id="lives">10</span></h2>
-        </div>
-        
-        <div class="game">
-            <button class="start-game" id="start-game">Começar!</button>
-        </div>
-        <button class="reset" id="reset" onclick="window.location.reload()">RESET GAME</button>
-    </div>
-
-
+            <div class="column keys-check">
+                <span>Teclas</span> <input type="checkbox" checked>
+            </div>
+            
+        </header>
+        <ul class="piano-keys">
+            <li class="key white" data-key="a"><span>a</span></li>
+            <li class="key black" data-key="w"><span>w</span></li>
+            <li class="key white" data-key="s"><span>s</span></li>
+            <li class="key black" data-key="e"><span>e</span></li>
+            <li class="key white" data-key="d"><span>d</span></li>
+            <li class="key white" data-key="f"><span>f</span></li>
+            <li class="key black" data-key="t"><span>t</span></li>
+            <li class="key white" data-key="g"><span>g</span></li>
+            <li class="key black" data-key="y"><span>y</span></li>
+            <li class="key white" data-key="h"><span>h</span></li>
+            <li class="key black" data-key="u"><span>u</span></li>
+            <li class="key white" data-key="j"><span>j</span></li>
+            <li class="key white" data-key="k"><span>k</span></li>
+            <li class="key black" data-key="o"><span>o</span></li>
+            <li class="key white" data-key="l"><span>l</span></li>
+            <li class="key black" data-key="p"><span>p</span></li>
+            <li class="key white" data-key="ç"><span>ç</span></li>
+        </ul>
+   </div>
 
     <script src="src/scripts/engine.js" defer></script>
 </body>
